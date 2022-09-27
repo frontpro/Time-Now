@@ -1,0 +1,300 @@
+/* hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+.hero-text,
+.hero-img {
+  padding: 3rem 0;
+}
+.hero-img {
+  position: relative;
+}
+.cyan {
+  z-index: -1;
+  position: absolute;
+  background-color: #46ccde;
+  top: 600px;
+  width: 100%;
+  height: 55%;
+}
+.hero-img img {
+  width: 100%;
+}
+.herotext {
+  margin: 3rem 0;
+}
+.herolink {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+.herolink .schedulling {
+  margin-right: 2rem;
+}
+.learn {
+  display: flex;
+  align-items: flex-start;
+  margin: 4rem 0;
+}
+.learn img {
+  margin-right: 1rem;
+}
+.learn a {
+  text-decoration: underline;
+}
+.learn p {
+  font-size: 1.5rem;
+}
+/* infulu section */
+.infulu {
+  width: 90%;
+  margin: 5rem auto 0 auto;
+}
+.influential {
+  display: flex;
+  flex-direction: column;
+}
+.inf-img {
+  margin: 2rem 0;
+}
+.inf-img img {
+  width: 50px;
+}
+.inf-text p {
+  margin: 2rem 0;
+}
+.inf-text2 p {
+  margin-bottom: 2rem;
+}
+/*dashboard section */
+.dashboard-data {
+  background-color: #cdf9ff;
+}
+.dashboard-analytic {
+  width: 90%;
+  margin: auto;
+}
+.dashboard {
+  padding-top: 3rem;
+}
+.dashboard p {
+  margin: 1rem 0;
+}
+.dashboard a {
+  display: inline-block;
+  margin: 2rem 0;
+}
+.analytic {
+  padding: 2rem 0;
+}
+.analytic a {
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 600px) {
+  .hero {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+  }
+  .hero-text,
+  .hero-img {
+    flex-basis: 50%;
+  }
+  .hero-text {
+    padding-right: 2rem;
+  }
+  .herotext {
+    margin: 1rem 0;
+  }
+  .herolink {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  .herolink .schedulling,
+  .herolink {
+    height: 70px;
+    align-items: flex-start;
+  }
+  .herolink a {
+    padding-left: 40px;
+  }
+  .hero-img {
+    padding-left: 2rem;
+    padding-top: 10rem;
+  }
+  .learn {
+    margin-top: 2rem;
+  }
+  .infulu {
+    margin-top: 4rem;
+  }
+  .inf-head {
+    grid-area: inf-head;
+    align-self: center;
+    margin-right: 5px;
+    padding-right: 5rem;
+  }
+  .inf-img {
+    grid-area: inf-img;
+    align-self: center;
+  }
+  .inf-img img {
+    margin: 0 2px;
+  }
+  .inf-text {
+    grid-area: inf-text;
+  }
+  .inf-text2 {
+    grid-area: inf-text1;
+  }
+  .influential {
+    margin: 4rem 0 1rem 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 90px 70px;
+    grid-template-areas:
+      "inf-head inf-img"
+      "inf-text inf-text"
+      "inf-text1 inf-text1";
+  }
+  .dashboard h4,
+  .analytic h4 {
+    font-size: 1.8rem;
+  }
+  .dashboard h3,
+  .analytic h3 {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 82vh;
+  }
+  .herolink {
+    display: flex;
+    flex-direction: row;
+  }
+  .herolink .schedulling {
+    margin-right: 3rem;
+  }
+  .hero-text {
+    margin-top: 5rem;
+  }
+  .hero-img {
+    padding: 5rem 0 0 3rem;
+  }
+  .herotext {
+    margin: 1rem 0 2rem 0;
+    padding-right: 5rem;
+  }
+  .infulu {
+    margin-top: 3rem;
+  }
+  .inf-head {
+    grid-area: inf-head;
+    align-self: center;
+    margin-right: 5px;
+  }
+  .inf-head h2 {
+    font-size: 3rem;
+  }
+  .inf-img {
+    grid-area: inf-img;
+    align-self: start;
+    margin-top: 1.8rem;
+  }
+  .inf-img img {
+    margin: 0 2px;
+  }
+  .inf-text {
+    grid-area: inf-text;
+    margin-left: 3rem;
+  }
+  .inf-text2 {
+    grid-area: inf-text1;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+  .influential {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "inf-head inf-text"
+      "inf-img inf-text1";
+  }
+  .dashboard {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+  }
+  .dashboard-analytic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    padding: 5rem auto;
+  }
+  .analytic {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+  }
+  .dashboard p,
+  .analytic p {
+    margin: 1rem 0;
+  }
+  .analytic a {
+    display: block;
+    margin-top: 4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero,
+  .infulu,
+  .dashboard-analytic {
+    width: 80%;
+    margin: auto;
+  }
+  .hero {
+    height: 90vh;
+  }
+  .hero-text {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero,
+  .infulu,
+  .dashboard-analytic {
+    width: 70%;
+    margin: auto;
+  }
+  .hero {
+    height: 80vh;
+  }
+  .hero-text {
+    margin-top: 5rem;
+  }
+  .infulu {
+    padding: 5rem 0;
+  }
+  .dashboard h3,
+  .analytic h3 {
+    width: 100%;
+  }
+  .inf-head h2 {
+    font-size: 3.5rem;
+  }
+  .dashboard-analytic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+}

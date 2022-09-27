@@ -1,0 +1,310 @@
+.block a {
+  display: block;
+}
+.main {
+  width: 90%;
+  margin: auto;
+}
+.planHead {
+  text-align: center;
+}
+.planHead h1 {
+  color: #000;
+}
+.plan-text p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+/* toggle */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  z-index: -3;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch {
+  z-index: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* plan-bill */
+.plan-bill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.month-label {
+  font-size: 1.7rem;
+  margin: 0 1rem;
+}
+
+/* plan-section */
+.plan-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.plan {
+  width: 320px;
+  border: 1px solid #42546698;
+  border-radius: 5px;
+  padding: 3rem;
+  margin: 4rem 0;
+}
+hr {
+  color: #bdbfc098;
+  margin: 1.5rem 0;
+}
+.plan p {
+  text-align: left;
+  margin: 1.5rem 0;
+}
+.plan-head {
+  font-size: 3.4rem;
+  color: #000;
+  font-weight: 600;
+}
+.plan-head .month {
+  font-size: 1.7rem;
+  color: #42546698;
+}
+.offers {
+  display: flex;
+  align-items: center;
+}
+.offers p {
+  margin: 1rem;
+}
+.plan .schedulling {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .planHead {
+    width: 70%;
+    margin: 5rem auto 2rem auto;
+  }
+  .plan-bill {
+    margin: 2rem 0;
+  }
+  .plans {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.7fr;
+    grid-template-areas: "plan1 plan2" "plan3 plan3";
+  }
+  .plan1 {
+    grid-area: plan1;
+    margin-right: 4rem;
+  }
+  .plan2 {
+    grid-area: plan2;
+    margin-left: 4rem;
+  }
+  .plan3 {
+    grid-area: plan3;
+    width: 100%;
+    height: 350px;
+  }
+  .switch {
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .planHead,
+  .plan-text {
+    width: 80%;
+    margin: auto;
+  }
+  .planHead {
+    margin: 5rem auto 1rem auto;
+  }
+  .plan-bill {
+    margin: 2rem 0;
+  }
+  .plans {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .plan {
+    width: 320px;
+    border: 1px solid #42546698;
+    border-radius: 5px;
+    padding: 3rem;
+    margin: 3rem 2rem;
+  }
+  .plan3 {
+    height: unset;
+    margin-right: 0;
+  }
+  .plan1 {
+    margin-left: 0;
+  }
+  .switch {
+    z-index: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .planHead,
+  .plan-text {
+    width: 90%;
+    margin: auto;
+  }
+  .planHead {
+    margin: 5rem auto 1rem auto;
+  }
+  .plan-bill {
+    margin: 2rem 0;
+  }
+  .plan {
+    width: 300px;
+
+    padding: 3rem;
+    margin: 3rem 2rem;
+  }
+  .plans {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .switch {
+    z-index: 0;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .planHead,
+  .plan-text {
+    width: 60%;
+    margin: auto;
+  }
+  .planHead {
+    margin: 5rem auto 1rem auto;
+  }
+  .plan-bill {
+    margin: 2rem 0;
+  }
+  .plan {
+    width: 340px;
+    padding: 3rem;
+    margin: 3rem 2rem;
+  }
+  .switch {
+    z-index: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .planHead,
+  .plan-text {
+    width: 59%;
+    margin: auto;
+  }
+  .planHead {
+    margin: 5rem auto 1rem auto;
+  }
+  .plan-bill {
+    margin: 2rem 0;
+  }
+  .plan {
+    width: 310px;
+    padding: 3rem;
+    margin: 3rem 2rem;
+  }
+  .switch {
+    z-index: 0;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .plan {
+    width: 330px;
+    padding: 3rem;
+    margin: 3rem 2rem;
+  }
+  .planHead {
+    margin: 5rem auto 1rem auto;
+  }
+  .plan-bill {
+    margin: 2rem 0;
+  }
+  .switch {
+    z-index: 0;
+  }
+}
+@media screen and (min-width: 1537px) {
+  .plan {
+    width: 410px;
+    padding: 3rem;
+    margin: 3rem 2rem;
+  }
+  .planHead {
+    margin: 5rem auto 2rem auto;
+  }
+  .plan-bill {
+    margin: 4rem 0;
+  }
+  .switch {
+    z-index: 0;
+  }
+}

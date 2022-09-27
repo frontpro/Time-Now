@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
+html {
+  font-size: 62.5%;
+  --header1: calc(4rem + 1vw);
+  --header2: calc(3rem + 1vw);
+  --header3: calc(2.8rem + 1vw);
+  --header4: calc(1.5rem + 1vw);
+  --text: calc(1.4rem + 1vw);
+  --big: calc(7.5rem + 1vw);
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+  color: #425466;
+  /* transition: all 1s ease-in-out; */
+}
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+a {
+  color: #425466;
+  font-size: 1.5rem;
+  font-weight: 600;
+  pointer-events: all;
+}
+h1 {
+  font-size: var(--header1);
+  color: #1d1b67;
+  line-height: 1.2;
+}
+h2 {
+  font-size: var(--header2);
+  color: #1d1b67;
+  line-height: 1.2;
+}
+h3 {
+  font-size: var(--header3);
+  color: #005661;
+  line-height: 1.2;
+}
+h4 {
+  font-size: var(--header4);
+  color: #3b60bf;
+  line-height: 1.2;
+}
+p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
+.schedulling a {
+  background-color: #1d1b67;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  margin: 3rem auto;
+}
+nav {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+nav .nav-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: #3f3ba8;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-1000px);
+  transition: all 1s ease-in-out;
+  pointer-events: none;
+  z-index: 2;
+}
+.nav-links.open {
+  top: 0;
+  transform: translateY(0px);
+  pointer-events: all;
+}
+.nav-links a {
+  color: #fff;
+  display: block;
+  margin: 3rem 0;
+  text-align: center;
+}
+.nav-link a {
+  text-decoration: underline;
+}
+.ham {
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+/* footer section */
+footer {
+  padding: 2rem 0;
+}
+.foot-logo {
+  width: 90%;
+  margin: auto;
+}
+.links-foot {
+  width: 90%;
+  margin: auto;
+  padding: 2rem 0;
+}
+.link-foot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.tweet {
+  padding: 2rem 0;
+}
+.pmail {
+  position: relative;
+}
+.mail {
+  position: absolute;
+  bottom: 24px;
+  right: 5px;
+}
+.inputs {
+  width: 100%;
+  padding: 2.1rem;
+  font-size: 1.6rem;
+  border-radius: 5px;
+}
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000;
+}
+.foot-link a {
+  font-size: 1.6rem;
+  margin: 1.5rem 0;
+  display: block;
+  font-weight: 400;
+}
+.tweet .title {
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 3.8rem;
+    color: #1d1b67;
+    line-height: 1.2;
+  }
+  .wrap {
+    background: linear-gradient(to right, white 50%, #46ccde 50%);
+  }
+  .cyan,
+  .ham {
+    display: none;
+  }
+  .logo {
+    width: 10%;
+  }
+  .nav-links {
+    width: 80%;
+  }
+  .nav-link {
+    width: 200px;
+    justify-content: space-around;
+  }
+  nav .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transform: translateY(0px);
+    background-color: unset;
+    position: unset;
+  }
+  nav .nav-link {
+    display: flex;
+  }
+  .nav-link a {
+    color: #425466;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  .inputs {
+    width: 100%;
+  }
+  .pmail {
+    width: 60%;
+    position: relative;
+  }
+  .link-foot {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: var(--header1);
+    color: #1d1b67;
+    line-height: 1.2;
+  }
+  .link-foot {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .links-foot {
+    display: flex;
+  }
+  .link-foot,
+  .tweet {
+    flex-basis: 50%;
+  }
+  .tweet {
+    margin-left: 6rem;
+    padding: 0;
+  }
+  .pmail {
+    width: 100%;
+    position: relative;
+  }
+}
+@media screen and (min-width: 1200px) {
+  nav,
+  .links-foot,
+  .foot-logo {
+    width: 80%;
+    margin: auto;
+  }
+  footer {
+    padding-top: 5rem;
+  }
+  .pmail {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  nav,
+  .foot-logo,
+  .links-foot {
+    width: 70%;
+    margin: auto;
+  }
+  h1 {
+    font-size: 7rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  .pmail {
+    width: 70%;
+  }
+}
