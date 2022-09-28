@@ -16,12 +16,17 @@ window.addEventListener('DOMContentLoaded',function(){
     });
     
 switches.addEventListener('click',function(){
-    if(!mo.classList.contains("show")){
-        mo.classList.add("show");
-        ye.classList.remove("show")
-    }
-    else{
-        mo.classList.remove("show");
-        ye.classList.add("show")
-    }
+    mo.forEach(function(i){
+        ye.forEach(function(j){
+            if(!i.classList.contains("show")){
+                i.classList.add("show");
+                j.classList.remove("show")
+            }
+            else{
+                i.classList.remove("show");
+                j.classList.add("show")
+            }
+        })
+    })
+    
 })
